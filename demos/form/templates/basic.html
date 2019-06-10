@@ -19,6 +19,8 @@
         <small class="error">{{ message }}</small><br>
         {% endfor %}
     {% endif %}
+    {{form.email.label}} <br>
+    {{ form.email }} <br>
     {{ form.remember }}{{ form.remember.label }}<br>
     {{ form.submit }}<br>
 </form>

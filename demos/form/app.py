@@ -51,6 +51,7 @@ def index():
 @app.route('/html', methods=['GET', 'POST'])
 def html():
     form = LoginForm()
+    print(form.username())
     if request.method == 'POST':
         username = request.form.get('username')
         flash('Welcome home, %s!' % username)

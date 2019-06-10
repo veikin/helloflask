@@ -18,6 +18,7 @@ class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired(), Length(8, 128)])
     remember = BooleanField('Remember me')
+    email = StringField('Email',validators=[Email('demo@qq.com')])
     submit = SubmitField('Log in')
 
 

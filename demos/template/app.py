@@ -78,6 +78,7 @@ def watchlist_with_static():
 @app.route('/flash')
 def just_flash():
     flash('I am flash, who is looking for me?')
+    flash('looking bash.html')
     return redirect(url_for('index'))
 
 
