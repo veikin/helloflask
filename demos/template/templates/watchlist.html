@@ -13,11 +13,15 @@
     <i>This user has not provided a bio.</i>
 {% endif %}
 {# Below is the movie list (this is comment) #}
-<h5>{{ user.username }}'s Watchlist ({{ movies|length }}):</h5>
+<h5>{{ user.username }}'s Watchlist ({{ movies|length}}):</h5>
+{# 自定义全局函数#}
+<h5>"{{bar()}}"</h5>
+
 <ul>
     {% for movie in movies %}
-    <li>{{ movie.name }} - {{ movie.year }}</li>
-    {% endfor %}
+    {# 自定义过滤器 musical#}
+    <li>{{loop.index }}-{{ movie.name|musical}} - {{ movie.year }}</li>
+    {% endfor %}   
 </ul>
 </body>
 </html>
