@@ -30,7 +30,7 @@ app.jinja_env.lstrip_blocks = True
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'secret string')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', prefix + os.path.join(app.root_path, 'data.db'))
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  #建议设置为False
 
 db = SQLAlchemy(app)
 
