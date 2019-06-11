@@ -27,7 +27,7 @@ app.config.update(
     MAIL_USE_SSL=True,
     MAIL_USERNAME=os.getenv('MAIL_USERNAME'),
     MAIL_PASSWORD=os.getenv('MAIL_PASSWORD'),
-    MAIL_DEFAULT_SENDER=('Grey Li', os.getenv('MAIL_USERNAME'))
+    MAIL_DEFAULT_SENDER=('Foxit', os.getenv('MAIL_USERNAME'))
 )
 
 mail = Mail(app)
